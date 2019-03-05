@@ -2,7 +2,7 @@
 
 function setup() {
     this.n = new neuralNet(10,5,2);
-    var canvas = createCanvas(500,500);
+    var canvas = createCanvas(document.getElementById('canvasDiv').clientWidth, document.getElementById('canvasDiv').clientHeight);
     
     canvas.parent('canvasDiv');
    
@@ -59,4 +59,8 @@ function draw(){
         currentPos2 += 30;
     }
     currentPos2 = 20; 
+}
+function createNewNN(){
+    n = new neuralNet(parseInt(document.getElementById('inputArea1').value), parseInt(document.getElementById('inputArea2').value), parseInt(document.getElementById('inputArea3').value))
+    
 }
